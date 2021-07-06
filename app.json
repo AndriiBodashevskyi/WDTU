@@ -1,0 +1,26 @@
+{
+  "id": "4b5d3fcf-efee-4920-bd82-3992e065d5db",
+  "name": "WDTU",
+  "publisher": "Andrii Bodashevskyi",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50250
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://WDTU.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
