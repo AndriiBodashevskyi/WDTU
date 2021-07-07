@@ -126,16 +126,16 @@ table 50000 "Radio Show WDTU"
 
         }
     }
-    // fieldgroups
-    // { 
-    //     fieldgroup(DropDown; "No.", Name, "Host Name")
-    //     {
+    fieldgroups
+    {
+        fieldgroup(DropDown; "No.", Name, "Host Name")
+        {
 
-    //     }
-    //     fieldgroup(Brick; "No.", Name, "Audience Share")
-    //     {
+        }
+        fieldgroup(Brick; "No.", Name, "Audience Share")
+        {
 
-    //     }
-    // }
-    
+        }
+    }
+
 }

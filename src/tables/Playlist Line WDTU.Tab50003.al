@@ -24,6 +24,11 @@ table 50003 "Playlist Line WDTU"
         {
             Caption = 'No.';
             DataClassification = CustomerContent;
+            TableRelation = if (Type = const(Resource)) Resource."No."
+            else
+            if (Type = const(Show)) "Radio Show WDTU"."No."
+            else
+            if (Type = const(Item)) Item."No.";
         }
         field(30; "Data Format"; Enum "Data Format WDTU")
         {
