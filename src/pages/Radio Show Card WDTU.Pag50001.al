@@ -63,6 +63,51 @@ page 50001 "Radio Show Card WDTU"
                     ToolTip = 'Specifies the value of the Royalty Cost field';
                     ApplicationArea = All;
                 }
+                                field(Frequency; Rec.Frequency)
+                {
+                    ToolTip = 'Specifies the value of the Frequency field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("PSA Planned Quantity"; Rec."PSA Planned Quantity")
+                {
+                    ToolTip = 'Specifies the value of the PSA Planned Quantity field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Ads Planned Quantity"; Rec."Ads Planned Quantity")
+                {
+                    ToolTip = 'Specifies the value of the Ads Planned Quantity field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("News Required"; Rec."News Required")
+                {
+                    ToolTip = 'Specifies the value of the News Required field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("News Duration"; Rec."News Duration")
+                {
+                    ToolTip = 'Specifies the value of the News Duration field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Sports Required"; Rec."Sports Required")
+                {
+                    ToolTip = 'Specifies the value of the Sports Required field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Sports Duration"; Rec."Sports Duration")
+                {
+                    ToolTip = 'Specifies the value of the Sports Duration field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Weather Required"; Rec."Weather Required")
+                {
+                    ToolTip = 'Specifies the value of the Weather Required field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Weather Duration"; Rec."Weather Duration")
+                {
+                    ToolTip = 'Specifies the value of the Weather Duration field';
+                    ApplicationArea = Basic, Suite;
+                }
             }
         }
     }
