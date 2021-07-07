@@ -63,9 +63,9 @@ page 50005 "Radio Show Entries WDTU"
                     ToolTip = 'Specifies the value of the Fee Amount field';
                     ApplicationArea = Basic, Suite;
                 }
-                field("ACSAP ID"; Rec."ACSAP ID")
+                field("ASCAP ID"; Rec."ASCAP ID")
                 {
-                    ToolTip = 'Specifies the value of the ACSAP ID field';
+                    ToolTip = 'Specifies the value of the ASCAP ID field';
                     ApplicationArea = Basic, Suite;
                 }
                 field("Publisher Code"; Rec."Publisher Code")

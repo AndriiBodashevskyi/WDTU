@@ -55,9 +55,9 @@ table 50005 "Radio Show Entry WDTU"
             Caption = 'Fee Amount';
             DataClassification = CustomerContent;
         }
-        field(100; "ACSAP ID"; Integer)
+        field(100; "ASCAP ID"; Integer)
         {
-            Caption = 'ACSAP ID';
+            Caption = 'ASCAP ID';
             DataClassification = CustomerContent;
         }
         field(120; "Publisher Code"; Code[10])
