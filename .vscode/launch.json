@@ -7,7 +7,7 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "WDTU",
-            "startupObjectId": 50001,
+            "startupObjectId": 50009,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,

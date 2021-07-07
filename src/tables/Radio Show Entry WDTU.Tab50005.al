@@ -72,6 +72,14 @@ table 50005 "Radio Show Entry WDTU"
         {
             Clustered = true;
         }
+        key(Reporting; "Radio Show No.", Date)
+        {
+            SumIndexFields = "Fee Amount";
+        }
+        key(Reporting2; Type, "No.", Date)
+        {
+            SumIndexFields = "Fee Amount";
+        }
     }
 
 }

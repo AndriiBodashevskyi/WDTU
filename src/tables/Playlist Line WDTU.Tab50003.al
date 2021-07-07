@@ -58,7 +58,7 @@ table 50003 "Playlist Line WDTU"
     }
     keys
     {
-        key(PK; "Document No.")
+        key(PK; "Document No.", "Line No.")
         {
             Clustered = true;
         }

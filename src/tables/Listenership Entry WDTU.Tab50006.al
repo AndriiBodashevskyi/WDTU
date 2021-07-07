@@ -57,6 +57,10 @@ table 50006 "Listenership Entry WDTU"
         {
             Clustered = true;
         }
+        key(Reporting; "Radio Show No.", Date, "Start Time", "Age Demographic")
+        {
+            SumIndexFields = "Listener Count", "Audience Share";
+        }
     }
 
 }
