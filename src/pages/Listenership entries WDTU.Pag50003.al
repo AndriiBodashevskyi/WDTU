@@ -1,8 +1,8 @@
-page 50003 "Listenership entries"
+page 50003 "Listenership Entries WDTU"
 {
     
     ApplicationArea = Basic,Suite;
-    Caption = 'Listenership entries';
+    Caption = 'Listenership Entries';
     PageType = List;
     SourceTable = "Listenership Entry WDTU";
     UsageCategory = Lists;

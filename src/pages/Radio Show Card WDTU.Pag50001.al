@@ -1,12 +1,10 @@
 page 50001 "Radio Show Card WDTU"
 {
 
-    ApplicationArea = All;
     Caption = 'Radio Show Card';
     PageType = Card;
     SourceTable = "Radio Show WDTU";
-    UsageCategory = Documents;
-    
+
     layout
     {
         area(content)
@@ -63,7 +61,7 @@ page 50001 "Radio Show Card WDTU"
                     ToolTip = 'Specifies the value of the Royalty Cost field';
                     ApplicationArea = All;
                 }
-                                field(Frequency; Rec.Frequency)
+                field(Frequency; Rec.Frequency)
                 {
                     ToolTip = 'Specifies the value of the Frequency field';
                     ApplicationArea = Basic, Suite;
@@ -111,5 +109,5 @@ page 50001 "Radio Show Card WDTU"
             }
         }
     }
-    
+
 }
