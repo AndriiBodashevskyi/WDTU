@@ -14,6 +14,9 @@ table 50004 "Playlist Item Rate WDTU"
         {
             Caption = 'Source No.';
             DataClassification = CustomerContent;
+            TableRelation = if ("Source Type" = const(Vendor)) Vendor."No."
+            else 
+            if ("Source Type" = const(Customer)) Customer."No.";
         }
         field(30; "Item No."; Code[20])
         {
