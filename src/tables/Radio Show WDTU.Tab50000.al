@@ -14,6 +14,7 @@ table 50000 "Radio Show WDTU"
         {
             Caption = 'Radio Show Type';
             DataClassification = CustomerContent;
+            TableRelation = "Radio Show Type WDTU";
         }
         field(30; Name; Text[50])
         {
