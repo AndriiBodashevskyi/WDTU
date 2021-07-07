@@ -2,7 +2,7 @@ table 50000 "Radio Show WDTU"
 {
     Caption = 'Radio Show';
     DataClassification = CustomerContent;
-    
+
     fields
     {
         field(1; "No."; Code[20])
@@ -55,6 +55,57 @@ table 50000 "Radio Show WDTU"
             Caption = 'Royalty Cost';
             DataClassification = CustomerContent;
         }
+        field(1000; Frequency; Enum "Frequency WDTU")
+        {
+            Caption = 'Frequency';
+            DataClassification = CustomerContent;
+        }
+        field(1010; "PSA Planned Quantity"; Integer)
+        {
+            Caption = 'PSA Planned Quantity';
+            DataClassification = CustomerContent;
+        }
+        field(1020; "Ads Planned Quantity"; Integer)
+        {
+            Caption = 'Ads Planned Quantity';
+            DataClassification = CustomerContent;
+        }
+        field(1030; "News Required"; Boolean)
+        {
+            Caption = 'News Required';
+            DataClassification = CustomerContent;
+        }
+        field(1040; "News Duration"; Duration)
+        {
+            Caption = 'News Duration';
+            DataClassification = CustomerContent;
+        }
+        field(1050; "Sports Required"; Boolean)
+        {
+            Caption = 'Sports Required';
+            DataClassification = CustomerContent;
+        }
+        field(1060; "Sports Duration"; Duration)
+        {
+            Caption = 'Sports Duration';
+            DataClassification = CustomerContent;
+        }
+        field(1070; "Weather Required"; Boolean)
+        {
+            Caption = 'Weather Required';
+            DataClassification = CustomerContent;
+        }
+        field(1080; "Weather Duration"; Duration)
+        {
+            Caption = 'Weather Duration';
+            DataClassification = CustomerContent;
+        }
+        field(1090; "Date Filter"; Date)
+        {
+            Caption = 'Date Filter';
+            FieldClass = FlowFilter;
+        }
+
     }
     keys
     {
@@ -62,6 +113,24 @@ table 50000 "Radio Show WDTU"
         {
             Clustered = true;
         }
+        key(Name; Name)
+        {
+
+        }
+        key(HostName; "Host Name")
+        {
+
+        }
     }
-    
+    // fieldgroups
+    // { 
+    //     fieldgroup(DropDown; "No.", Name, "Host Name")
+    //     {
+
+    //     }
+    //     fieldgroup(Brick; "No.", Name, "Audience Share")
+    //     {
+
+    //     }
+    // }
 }
