@@ -75,6 +75,7 @@ table 50000 "Radio Show WDTU"
         {
             Caption = 'News Required';
             DataClassification = CustomerContent;
+            InitValue = true;
         }
         field(1040; "News Duration"; Duration)
         {
@@ -85,6 +86,7 @@ table 50000 "Radio Show WDTU"
         {
             Caption = 'Sports Required';
             DataClassification = CustomerContent;
+            InitValue = true;
         }
         field(1060; "Sports Duration"; Duration)
         {
@@ -95,6 +97,7 @@ table 50000 "Radio Show WDTU"
         {
             Caption = 'Weather Required';
             DataClassification = CustomerContent;
+            InitValue = true;
         }
         field(1080; "Weather Duration"; Duration)
         {
@@ -134,4 +137,16 @@ table 50000 "Radio Show WDTU"
 
     //     }
     // }
+
+    // TODO: Playlist Item Rate: This is a list of rates for items that are played during a
+    // show, as determined by our advertising sales staff or the royalty organization we
+    // use.
+    // Radio Show Entry: This is a detailed history of all of the time spent and items
+    // played during the show, with any related royalties owed or advertisement
+    // revenue expected.
+    // Listenership Entry: This is a detailed history of estimated listenership
+    // provided by the ratings organization to which we subscribe.
+    // Publisher: This is a reference list of the publishers of content that we use. This
+    // will include music distributors, news wires, sports, and weather sources, as well
+    // as WDTU (we use material that we publish).
 }
