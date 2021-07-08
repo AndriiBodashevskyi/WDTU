@@ -6,6 +6,7 @@ page 50000 "Radio Show List WDTU"
     PageType = List;
     SourceTable = "Radio Show WDTU";
     UsageCategory = Lists;
+    CardPageId = "Radio Show Card WDTU";
 
     layout
     {
