@@ -1,7 +1,7 @@
 table 50040 "Date Formula WDTU"
 {
     Caption = 'Date Formula';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
 
     fields
     {
