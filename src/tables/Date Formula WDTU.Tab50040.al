@@ -16,6 +16,8 @@ table 50040 "Date Formula WDTU"
             DataClassification = CustomerContent;
             trigger OnValidate()
             begin
+                if "Reference for Data Calculation" = 0D then
+                    "Reference for Data Calculation" := Today;
                 CalculateNewDate();
             end;
         }
@@ -25,6 +27,8 @@ table 50040 "Date Formula WDTU"
             DataClassification = CustomerContent;
             trigger OnValidate()
             begin
+                if "Reference for Data Calculation" = 0D then
+                    "Reference for Data Calculation" := Today;
                 CalculateNewDate();
             end;
         }
@@ -45,4 +49,5 @@ table 50040 "Date Formula WDTU"
     begin
         "Date Result" := CalcDate("Date Fomula to Test", "Reference for Data Calculation");
     end;
+
 }
