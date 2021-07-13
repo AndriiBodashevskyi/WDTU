@@ -39,23 +39,30 @@ table 50000 "Radio Show WDTU"
         field(100; "Average Listeners"; Decimal)
         {
             Caption = 'Average Listeners';
+            Editable = false;
             FieldClass = FlowField;
-            CalcFormula = - average("Listenership Entry WDTU"."Listener Count" where("Radio Show No." = field("No.")));
+            CalcFormula = average("Listenership Entry WDTU"."Listener Count" where("Radio Show No." = field("No."), Date = field("Date Filter")));
         }
         field(110; "Audience Share"; Decimal)
         {
             Caption = 'Audience Share';
-            DataClassification = CustomerContent;
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = average("Listenership Entry WDTU"."Audience Share" where("Radio Show No." = field("No."), Date = field("Date Filter")));
         }
         field(120; "Advertising Revenue"; Decimal)
         {
             Caption = 'Advertising Revenue';
-            DataClassification = CustomerContent;
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum("Radio Show Entry WDTU"."Fee Amount" where("Radio Show No." = field("No."), "Data Format" = filter(Advertisement), Date = field("Date Filter")));
         }
         field(130; "Royalty Cost"; Decimal)
         {
             Caption = 'Royalty Cost';
-            DataClassification = CustomerContent;
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = sum("Radio Show Entry WDTU"."Fee Amount" where("Radio Show No." = field("No."), "Data Format" = filter(CD | MP3 | Vinyl), Date = field("Date Filter")));
         }
         field(1000; Frequency; Enum "Frequency WDTU")
         {
