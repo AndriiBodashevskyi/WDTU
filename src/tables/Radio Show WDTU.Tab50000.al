@@ -39,7 +39,8 @@ table 50000 "Radio Show WDTU"
         field(100; "Average Listeners"; Decimal)
         {
             Caption = 'Average Listeners';
-            DataClassification = CustomerContent;
+            FieldClass = FlowField;
+            CalcFormula = - average("Listenership Entry WDTU"."Listener Count" where("Radio Show No." = field("No.")));
         }
         field(110; "Audience Share"; Decimal)
         {
