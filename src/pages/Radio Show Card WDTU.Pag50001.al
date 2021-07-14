@@ -31,6 +31,11 @@ page 50001 "Radio Show Card WDTU"
                     ToolTip = 'Specifies the value of the Run Time field';
                     ApplicationArea = All;
                 }
+                field(Frequency; Rec.Frequency)
+                {
+                    ToolTip = 'Specifies the value of the Frequency field';
+                    ApplicationArea = Basic, Suite;
+                }
                 field("Host Code"; Rec."Host Code")
                 {
                     ToolTip = 'Specifies the value of the Host Code field';
@@ -41,31 +46,9 @@ page 50001 "Radio Show Card WDTU"
                     ToolTip = 'Specifies the value of the Host Name field';
                     ApplicationArea = All;
                 }
-                field("Average Listeners"; Rec."Average Listeners")
-                {
-                    ToolTip = 'Specifies the value of the Average Listeners field';
-                    ApplicationArea = All;
-                }
-                field("Audience Share"; Rec."Audience Share")
-                {
-                    ToolTip = 'Specifies the value of the Audience Share field';
-                    ApplicationArea = All;
-                }
-                field("Advertising Revenue"; Rec."Advertising Revenue")
-                {
-                    ToolTip = 'Specifies the value of the Advertising Revenue field';
-                    ApplicationArea = All;
-                }
-                field("Royalty Cost"; Rec."Royalty Cost")
-                {
-                    ToolTip = 'Specifies the value of the Royalty Cost field';
-                    ApplicationArea = All;
-                }
-                field(Frequency; Rec.Frequency)
-                {
-                    ToolTip = 'Specifies the value of the Frequency field';
-                    ApplicationArea = Basic, Suite;
-                }
+            }
+            group(Requirements)
+            {
                 field("PSA Planned Quantity"; Rec."PSA Planned Quantity")
                 {
                     ToolTip = 'Specifies the value of the PSA Planned Quantity field';
@@ -105,6 +88,29 @@ page 50001 "Radio Show Card WDTU"
                 {
                     ToolTip = 'Specifies the value of the Weather Duration field';
                     ApplicationArea = Basic, Suite;
+                }
+            }
+            group(Statistics)
+            {
+                field("Average Listeners"; Rec."Average Listeners")
+                {
+                    ToolTip = 'Specifies the value of the Average Listeners field';
+                    ApplicationArea = All;
+                }
+                field("Audience Share"; Rec."Audience Share")
+                {
+                    ToolTip = 'Specifies the value of the Audience Share field';
+                    ApplicationArea = All;
+                }
+                field("Advertising Revenue"; Rec."Advertising Revenue")
+                {
+                    ToolTip = 'Specifies the value of the Advertising Revenue field';
+                    ApplicationArea = All;
+                }
+                field("Royalty Cost"; Rec."Royalty Cost")
+                {
+                    ToolTip = 'Specifies the value of the Royalty Cost field';
+                    ApplicationArea = All;
                 }
             }
         }

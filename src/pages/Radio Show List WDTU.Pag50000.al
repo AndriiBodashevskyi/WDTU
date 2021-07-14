@@ -1,7 +1,7 @@
 page 50000 "Radio Show List WDTU"
 {
 
-    ApplicationArea = All;
+    ApplicationArea = Basic, Suite;
     Caption = 'Radio Show List';
     PageType = List;
     SourceTable = "Radio Show WDTU";
@@ -10,7 +10,7 @@ page 50000 "Radio Show List WDTU"
 
     layout
     {
-        area(content)
+        area(Content)
         {
             repeater(General)
             {
