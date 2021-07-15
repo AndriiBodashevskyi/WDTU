@@ -15,16 +15,19 @@ page 50001 "Radio Show Card WDTU"
                 {
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field("Radio Show Type"; Rec."Radio Show Type")
                 {
                     ToolTip = 'Specifies the value of the Radio Show Type field';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field(Name; Rec.Name)
                 {
                     ToolTip = 'Specifies the value of the Name field';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field("Run Time"; Rec."Run Time")
                 {
@@ -96,6 +99,7 @@ page 50001 "Radio Show Card WDTU"
                 {
                     ToolTip = 'Specifies the value of the Average Listeners field';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field("Audience Share"; Rec."Audience Share")
                 {
