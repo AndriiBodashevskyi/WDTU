@@ -1,4 +1,4 @@
-table 50004 "Playlist Item Rate WDTU"
+table 50200 "Playlist Item Rate Test WDTU"
 {
     Caption = 'Playlist Item Rate';
     DataClassification = CustomerContent;
