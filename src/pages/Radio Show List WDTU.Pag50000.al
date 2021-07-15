@@ -109,7 +109,15 @@ page 50000 "Radio Show List WDTU"
                     ToolTip = 'Specifies the value of the Weather Duration field';
                     ApplicationArea = Basic, Suite;
                 }
-                
+
+            }
+        }
+        area(FactBoxes)
+        {
+            part(Fans; "Radio Show Fan Factbox WDTU")
+            {
+                ApplicationArea = Basic, Suite;
+                SubPageLink = "Radio Show No." = field("No.");
             }
         }
     }
