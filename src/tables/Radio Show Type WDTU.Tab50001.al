@@ -17,6 +17,11 @@ table 50001 "Radio Show Type WDTU"
             Caption = 'Description';
             DataClassification = CustomerContent;
         }
+        field(20; "User Comment"; Text[250])
+        {
+            Caption = 'User Comment';
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {

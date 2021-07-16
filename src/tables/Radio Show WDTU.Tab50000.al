@@ -121,7 +121,7 @@ table 50000 "Radio Show WDTU"
     }
     keys
     {
-        key(PK; "No.")
+        key(PK; "No.", "Radio Show Type")
         {
             Clustered = true;
         }
