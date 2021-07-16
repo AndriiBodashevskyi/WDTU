@@ -10,7 +10,7 @@ report 50001 "Shows by Type WDTU"
     {
         dataitem(RadioShowType; "Radio Show Type WDTU")
         {
-            column(UserComment; "User Comment")
+            column(UserComment; UserComment)
             {
 
             }
@@ -55,8 +55,29 @@ report 50001 "Shows by Type WDTU"
             }
         }
     }
+    requestpage
+    {
+        layout
+        {
+            area(content)
+            {
+                group(Options)
+                {
+                    field(UserComment; UserComment)
+                    {
+                        ApplicationArea = Basic, Suite;
+                        Caption = 'User Comment';
+                        ToolTip = 'User Comment';
+                    }
+                }
+            }
+        }
+    }
     labels
     {
         ReportTitle = 'Show Schedule by Type';
     }
+
+    var
+        UserComment: Text;
 }
