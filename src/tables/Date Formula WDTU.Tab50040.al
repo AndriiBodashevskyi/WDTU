@@ -15,10 +15,13 @@ table 50040 "Date Formula WDTU"
             Caption = 'Reference for Data Calculation';
             DataClassification = CustomerContent;
             trigger OnValidate()
+            var
+                DateForMgt: Codeunit "Date Formula Managment WDTU";
             begin
                 if "Reference for Data Calculation" = 0D then
                     "Reference for Data Calculation" := Today;
-                CalculateNewDate();
+                "Date Result" := DateForMgt.CalculateNewDate("Date Fomula to Test", "Reference for Data Calculation");
+                // CalculateNewDate();
             end;
         }
         field(20; "Date Fomula to Test"; DateFormula)
@@ -26,10 +29,13 @@ table 50040 "Date Formula WDTU"
             Caption = 'Date Fomula to Test';
             DataClassification = CustomerContent;
             trigger OnValidate()
+            var
+                DateForMgt: Codeunit "Date Formula Managment WDTU";
             begin
                 if "Reference for Data Calculation" = 0D then
                     "Reference for Data Calculation" := Today;
-                CalculateNewDate();
+                "Date Result" := DateForMgt.CalculateNewDate("Date Fomula to Test", "Reference for Data Calculation");
+                // CalculateNewDate();
             end;
         }
         field(30; "Date Result"; Date)
@@ -45,12 +51,12 @@ table 50040 "Date Formula WDTU"
             Clustered = true;
         }
     }
-    local procedure CalculateNewDate()
-    var
-        DateForMgt: Codeunit "Date Formula Managment WDTU";
-    begin
-        // "Date Result" := CalcDate("Date Fomula to Test", "Reference for Data Calculation");
-        "Date Result" := DateForMgt.CalculateNewDate("Date Fomula to Test", "Reference for Data Calculation");
-    end;
+    // local procedure CalculateNewDate()
+    // var
+    //     DateForMgt: Codeunit "Date Formula Managment WDTU";
+    // begin
+    //     // "Date Result" := CalcDate("Date Fomula to Test", "Reference for Data Calculation");
+    //     "Date Result" := DateForMgt.CalculateNewDate("Date Fomula to Test", "Reference for Data Calculation");
+    // end;
 
 }
