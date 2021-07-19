@@ -46,8 +46,11 @@ table 50040 "Date Formula WDTU"
         }
     }
     local procedure CalculateNewDate()
+    var
+        DateForMgt: Codeunit "Date Formula Managment WDTU";
     begin
-        "Date Result" := CalcDate("Date Fomula to Test", "Reference for Data Calculation");
+        // "Date Result" := CalcDate("Date Fomula to Test", "Reference for Data Calculation");
+        "Date Result" := DateForMgt.CalculateNewDate("Date Fomula to Test", "Reference for Data Calculation");
     end;
 
 }
