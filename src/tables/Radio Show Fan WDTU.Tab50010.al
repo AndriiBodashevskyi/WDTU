@@ -30,6 +30,42 @@ table 50010 "Radio Show Fan WDTU"
             Caption = 'Last Contacted';
             DataClassification = CustomerContent;
         }
+        field(60; Address; Text[50])
+        {
+            Caption = 'Address';
+            DataClassification = CustomerContent;
+        }
+        field(70; "Address 2"; Text[50])
+        {
+            Caption = 'Address 2';
+            DataClassification = CustomerContent;
+        }
+        field(80; City; Text[30])
+        {
+            Caption = 'City';
+            DataClassification = CustomerContent;
+        }
+        field(90; "Country/Region Code"; Code[10])
+        {
+            Caption = 'Country/Region Code';
+            DataClassification = CustomerContent;
+        }
+        field(100; "Post Code"; Code[20])
+        {
+            Caption = 'Post Code';
+            DataClassification = CustomerContent;
+            trigger OnValidate()
+            var
+                PostCode: Record "Post Code";
+            begin
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) and guiallowed);
+            end;
+        }
+        field(110; County; Text[30])
+        {
+            Caption = 'County';
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {
