@@ -50,6 +50,11 @@ table 50010 "Radio Show Fan WDTU"
             Caption = 'Country/Region Code';
             DataClassification = CustomerContent;
         }
+        field(95; County; Text[30])
+        {
+            Caption = 'County';
+            DataClassification = CustomerContent;
+        }
         field(100; "Post Code"; Code[20])
         {
             Caption = 'Post Code';
@@ -61,11 +66,17 @@ table 50010 "Radio Show Fan WDTU"
                 PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) and guiallowed);
             end;
         }
-        field(110; County; Text[30])
+        field(110; Gender; Enum "Gender WDTU")
         {
-            Caption = 'County';
+            Caption = 'Gender';
             DataClassification = CustomerContent;
         }
+        field(120; "Birth Date"; Date)
+        {
+            Caption = 'Birth Date';
+            DataClassification = CustomerContent;
+        }
+
     }
     keys
     {

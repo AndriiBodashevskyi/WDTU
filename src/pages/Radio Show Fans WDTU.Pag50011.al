@@ -68,6 +68,16 @@ page 50011 "Radio Show Fans WDTU"
                     ToolTip = 'Specifies the value of the Post Code field';
                     ApplicationArea = Basic, Suite;
                 }
+                field(Gender; Rec.Gender)
+                {
+                    ToolTip = 'Specifies the value of the Gender field';
+                    ApplicationArea = All;
+                }
+                field("Birth Date"; Rec."Birth Date")
+                {
+                    ToolTip = 'Specifies the value of the Birth Date field';
+                    ApplicationArea = All;
+                }
             }
         }
     }
