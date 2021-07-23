@@ -4,23 +4,15 @@ page 50006 "Playlist Subform WDTU"
     Caption = 'Playlist Subform';
     PageType = ListPart;
     SourceTable = "Playlist Line WDTU";
+    AutoSplitKey = true;
+    DelayedInsert = true;
 
     layout
     {
         area(content)
         {
-            repeater(General)
+            repeater(Group)
             {
-                field("Document No."; Rec."Document No.")
-                {
-                    ToolTip = 'Specifies the value of the Document No. field';
-                    ApplicationArea = All;
-                }
-                field("Line No."; Rec."Line No.")
-                {
-                    ToolTip = 'Specifies the value of the Line No. field';
-                    ApplicationArea = All;
-                }
                 field(Type; Rec."Type")
                 {
                     ToolTip = 'Specifies the value of the Type field';
@@ -30,15 +22,36 @@ page 50006 "Playlist Subform WDTU"
                 {
                     ToolTip = 'Specifies the value of the No. field';
                     ApplicationArea = All;
+                    trigger OnValidate()
+                    var
+                        Res: Record Resource;
+                        Item: Record Item;
+                        RadioShow: Record "Radio Show WDTU";
+                    begin
+                        case Rec.Type of
+                            Rec.Type::Resource:
+                                begin
+                                    Res.Get(Rec."No.");
+                                    Rec.Description := Res.Name;
+                                end;
+                            Rec.Type::Item:
+                                begin
+                                    Item.Get(Rec."No.");
+                                    Rec.Description := Item.Description;
+                                    Rec."Data Format" := Item."Data Format WDTU";
+                                    Rec.Duration := Item."Duration WDTU";
+                                end;
+                            Rec.Type::Show:
+                                begin
+                                    RadioShow.Get(Rec."No.");
+                                    Rec.Description := RadioShow.Name;
+                                end;
+                        end
+                    end;
                 }
                 field("Data Format"; Rec."Data Format")
                 {
                     ToolTip = 'Specifies the value of the Data Format field';
-                    ApplicationArea = All;
-                }
-                field(Publisher; Rec.Publisher)
-                {
-                    ToolTip = 'Specifies the value of the Publisher field';
                     ApplicationArea = All;
                 }
                 field(Description; Rec.Description)

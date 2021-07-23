@@ -69,14 +69,24 @@ page 50000 "Radio Show List WDTU"
                     ToolTip = 'Specifies the value of the Frequency field';
                     ApplicationArea = Basic, Suite;
                 }
-                field("PSA Planned Quantity"; Rec."PSA Planned Quantity")
+                field("PSA Required"; Rec."PSA Required")
                 {
                     ToolTip = 'Specifies the value of the PSA Planned Quantity field';
                     ApplicationArea = Basic, Suite;
                 }
-                field("Ads Planned Quantity"; Rec."Ads Planned Quantity")
+                field("PSA Count"; Rec."PSA Count")
+                {
+                    ToolTip = 'Specifies the value of the PSA Count field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Ads Required"; Rec."Ads Required")
                 {
                     ToolTip = 'Specifies the value of the Ads Planned Quantity field';
+                    ApplicationArea = Basic, Suite;
+                }
+                field("Ads Count"; Rec."Ads Count")
+                {
+                    ToolTip = 'Specifies the value of the Ads Count field';
                     ApplicationArea = Basic, Suite;
                 }
                 field("News Required"; Rec."News Required")

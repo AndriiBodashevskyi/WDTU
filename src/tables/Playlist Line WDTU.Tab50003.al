@@ -40,7 +40,7 @@ table 50003 "Playlist Line WDTU"
             Caption = 'Publisher';
             DataClassification = CustomerContent;
         }
-        field(50; Description; Text[50])
+        field(50; Description; Text[100])
         {
             Caption = 'Description';
             DataClassification = CustomerContent;
@@ -49,16 +49,27 @@ table 50003 "Playlist Line WDTU"
         {
             Caption = 'Duration';
             DataClassification = CustomerContent;
+            Editable = false;
         }
         field(70; "Start Time"; Time)
         {
             Caption = 'Start Time';
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                if Duration <> 0 then
+                    "End Time" := "Start Time" + Duration;
+            end;
         }
         field(80; "End Time"; Time)
         {
             Caption = 'End Time';
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                if "Start Time" <> 0T then
+                    Duration := "End Time" - "Start Time";
+            end;
         }
     }
     keys

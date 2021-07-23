@@ -68,40 +68,47 @@ report 50002 "Fan Promotion List WDTU"
             {
                 group(Options)
                 {
-                    field(Age12orLess; Age12orLess)
+                    field("Age 12 or Less"; Age12orLess)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Age 12 or less';
+                        ToolTip = 'Specifies the value of the Age12orLess field';
                     }
-                    field(Age13to18; Age13to18)
+                    field("Age 13 to 18"; Age13to18)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Age 13 to 18';
+                        ToolTip = 'Specifies the value of the Age13to18 field';
                     }
-                    field(Age19to34; Age19to34)
+                    field("Age 19 to 34"; Age19to34)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Age 19 to 34';
+                        ToolTip = 'Specifies the value of the Age19to34 field';
                     }
-                    field(Age35to50; Age35to50)
+                    field("Age 35 to 50"; Age35to50)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Age 35 to 50';
+                        ToolTip = 'Specifies the value of the Age35to50 field';
                     }
-                    field(AgeOver50; AgeOver50)
+                    field("Age Over 50"; AgeOver50)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Age over 50';
+                        ToolTip = 'Specifies the value of the AgeOver50 field';
                     }
-                    field(Male; Male)
+                    field(isMale; Male)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Male';
+                        ToolTip = 'Specifies the value of the Male field';
                     }
-                    field(Female; Female)
+                    field(isFemale; Female)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'Female';
+                        ToolTip = 'Specifies the value of the Female field';
                     }
                 }
             }

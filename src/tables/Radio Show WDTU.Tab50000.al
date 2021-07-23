@@ -69,15 +69,31 @@ table 50000 "Radio Show WDTU"
             Caption = 'Frequency';
             DataClassification = CustomerContent;
         }
-        field(1010; "PSA Planned Quantity"; Integer)
+        field(1010; "PSA Required"; Boolean)
         {
-            Caption = 'PSA Planned Quantity';
+            Caption = 'PSA Required';
             DataClassification = CustomerContent;
         }
-        field(1020; "Ads Planned Quantity"; Integer)
+        field(1011; "PSA Count"; Integer)
         {
-            Caption = 'Ads Planned Quantity';
+            Caption = 'PSA Count';
+            FieldClass = FlowField;
+            CalcFormula = count("Playlist Line WDTU" where
+                ("No." = field("No."), Type = const(Item), "Data Format" = const(PSA)));
+            Editable = false;
+        }
+        field(1020; "Ads Required"; Boolean)
+        {
+            Caption = 'Ads Required';
             DataClassification = CustomerContent;
+        }
+        field(1021; "Ads Count"; Integer)
+        {
+            Caption = 'Ads Count';
+            FieldClass = FlowField;
+            CalcFormula = count("Playlist Line WDTU" where
+                ("No." = field("No."), Type = const(Item), "Data Format" = const(Advertisement)));
+            Editable = false;
         }
         field(1030; "News Required"; Boolean)
         {

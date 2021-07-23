@@ -6,7 +6,7 @@ page 50009 "Playlist List WDTU"
     PageType = List;
     SourceTable = "Playlist Header WDTU";
     UsageCategory = Lists;
-    CardPageId = "Playlist Card WDTU";
+    CardPageId = "Playlist Document WDTU";
 
     layout
     {
@@ -23,6 +23,10 @@ page 50009 "Playlist List WDTU"
                 {
                     ToolTip = 'Specifies the value of the Radio Show No. field';
                     ApplicationArea = Basic, Suite;
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();
+                    end;
                 }
                 field(Description; Rec.Description)
                 {
@@ -48,6 +52,31 @@ page 50009 "Playlist List WDTU"
                 {
                     ToolTip = 'Specifies the value of the End Time field';
                     ApplicationArea = Basic, Suite;
+                }
+                field("Ads Required"; Rec."Ads Required")
+                {
+                    ToolTip = 'Specifies the value of the Ads Required field';
+                    ApplicationArea = All;
+                }
+                field("PSA Required"; Rec."PSA Required")
+                {
+                    ToolTip = 'Specifies the value of the PSA Required field';
+                    ApplicationArea = All;
+                }
+                field("News Required"; Rec."News Required")
+                {
+                    ToolTip = 'Specifies the value of the News Required field';
+                    ApplicationArea = All;
+                }
+                field("Sports Required"; Rec."Sports Required")
+                {
+                    ToolTip = 'Specifies the value of the Sports Required field';
+                    ApplicationArea = All;
+                }
+                field("Weather Required"; Rec."Weather Required")
+                {
+                    ToolTip = 'Specifies the value of the Weather Required field';
+                    ApplicationArea = All;
                 }
             }
         }

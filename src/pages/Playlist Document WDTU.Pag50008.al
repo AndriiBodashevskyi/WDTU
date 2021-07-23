@@ -1,15 +1,17 @@
-page 50008 "Playlist Card WDTU"
+page 50008 "Playlist Document WDTU"
 {
 
-    Caption = 'Playlist Card';
-    PageType = Card;
+    Caption = 'Playlist Document';
+    PageType = Document;
     SourceTable = "Playlist Header WDTU";
+    ApplicationArea = Basic, Suite;
+    UsageCategory = Documents;
 
     layout
     {
         area(content)
         {
-            group(General)
+            group(Group)
             {
                 field("No."; Rec."No.")
                 {
@@ -20,6 +22,10 @@ page 50008 "Playlist Card WDTU"
                 {
                     ToolTip = 'Specifies the value of the Radio Show No. field';
                     ApplicationArea = Basic, Suite;
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update();
+                    end;
                 }
                 field(Description; Rec.Description)
                 {
@@ -47,9 +53,19 @@ page 50008 "Playlist Card WDTU"
                     ApplicationArea = Basic, Suite;
                 }
             }
-            part(Playlist; "Playlist Subform WDTU")
+            part(Lines; "Playlist Subform WDTU")
             {
+                SubPageLink = "Document No." = field("No.");
+                SubPageView = sorting("Document No.", "Line No.");
                 ApplicationArea = Basic, Suite;
+            }
+        }
+        area(FactBoxes)
+        {
+            part(FactBox; "Playlist FactBox WDTU")
+            {
+                ApplicationArea = All;
+                SubPageLink = "No." = field("No.");
             }
         }
     }

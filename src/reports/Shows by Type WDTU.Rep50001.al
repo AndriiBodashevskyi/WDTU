@@ -10,7 +10,7 @@ report 50001 "Shows by Type WDTU"
     {
         dataitem(RadioShowType; "Radio Show Type WDTU")
         {
-            column(UserComment; UserComment)
+            column(User_Comment; UserComment)
             {
 
             }
@@ -63,7 +63,7 @@ report 50001 "Shows by Type WDTU"
             {
                 group(Options)
                 {
-                    field(UserComment; UserComment)
+                    field("User_Comment"; UserComment)
                     {
                         ApplicationArea = Basic, Suite;
                         Caption = 'User Comment';
